@@ -12,13 +12,7 @@ module Path.Dhall where
 
 import Data.Aeson
 import Dhall
-import Dhall.Syntax
 import Path
-
-pathRelDir :: Decoder (Path Rel Dir)
-pathRelDir = Decoder {..} where
-  extract (TextLit (Chunks [] t)) = parseRelDir t
-  expected = (Path Rel Dir)
 
 instance FromDhall (Path Rel File)
 instance FromDhall (Path Rel Dir)
