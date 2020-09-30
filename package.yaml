@@ -1,0 +1,23 @@
+name:                path-dhall-instance
+version:             0.1.0.0
+license:             MIT
+author:              "Daniel Firth"
+maintainer:          "dan.firth@homotopic.tech"
+copyright:           "2020 Daniel Firth"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+category:            Filesystem
+synopsis:            ToDhall and FromDhall instances for Path.
+description:         ToDhall and FromDhall instances for Path.
+
+dependencies:
+- aeson
+- base >= 4.7 && < 5
+- dhall
+- path
+
+library:
+  source-dirs: src
