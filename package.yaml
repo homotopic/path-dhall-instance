@@ -14,10 +14,11 @@ synopsis:            ToDhall and FromDhall instances for Path.
 description:         ToDhall and FromDhall instances for Path.
 
 dependencies:
-- aeson
 - base >= 4.7 && < 5
 - dhall
+- either
 - path
+- text
 
 library:
   source-dirs: src
