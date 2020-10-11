@@ -38,5 +38,13 @@ instance FromDhall (Path Rel Dir) where
 instance FromDhall (Path Rel File) where
     autoWith options = pathDecoder parseRelFile options
 
-instance ToDhall (Path Rel File)
+instance FromDhall (Path Abs Dir) where
+    autoWith options = pathDecoder parseAbsDir options
+
+instance FromDhall (Path Abs File) where
+    autoWith options = pathDecoder parseAbsFile options
+
 instance ToDhall (Path Rel Dir)
+instance ToDhall (Path Rel File)
+instance ToDhall (Path Abs Dir)
+instance ToDhall (Path Abs File)
