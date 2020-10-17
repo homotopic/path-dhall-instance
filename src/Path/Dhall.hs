@@ -14,6 +14,7 @@ import qualified Data.Text as T
 import Path
 import Data.Either.Validation
 
+pathDecoder :: Show a1 => (FilePath -> Either a1 a2) -> InputNormalizer -> Decoder a2
 pathDecoder f opts =
       Decoder
             { extract = extractPath
